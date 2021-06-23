@@ -1,4 +1,4 @@
-var canvas=document.getElementById('myCanvas');
+var canvas = new fabric.Canvas('myCanvas');
 var width_block=30;
 var height_block=30;
 var player_x=10;
