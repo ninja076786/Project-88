@@ -85,7 +85,7 @@ if(keypressed=="39"){
 }
   }
   function up(){
-    if(player_y=0){
+    if(player_y>0){
       player_y=player_y-width_block;
       console.log("When up arrow is pressed, X coordinate of player= "+player_x+" and Y coordinate of player= "+player_y);
       canvas.remove(player_object);
@@ -93,7 +93,7 @@ if(keypressed=="39"){
     }
   }
   function down(){
-    if(player_y=700){
+    if(player_y<700){
       player_y=player_y+width_block;
       console.log("When down arrow is pressed, X coordinate of player= "+player_x+" and Y coordinate of player= "+player_y);
       canvas.remove(player_object);
@@ -101,16 +101,16 @@ if(keypressed=="39"){
     }
   }
   function left(){
-    if(player_y=900){
-      player_y=player_y+width_block;
+    if(player_x>0){
+      player_x=player_x-width_block;
       console.log("When left arrow is pressed, X coordinate of player= "+player_x+" and Y coordinate of player= "+player_y);
       canvas.remove(player_object);
       player_update();
     }
   }
   function right(){
-    if(player_y=0){
-      player_y=player_y-width_block;
+    if(player_x<900){
+      player_x=player_x+width_block;
       console.log("When right arrow is pressed, X coordinate of player= "+player_x+" and Y coordinate of player= "+player_y);
       canvas.remove(player_object);
       player_update();
